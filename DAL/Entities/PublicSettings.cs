@@ -11,8 +11,8 @@ namespace DAL.Entities
         public int Id { get; set; }
         public int ExtraHours { get; set; }
         public int MissingHours { get; set; }
-        public DayOfWeek Weekend1 { get; set; }
-        public DayOfWeek? Weekend2 { get; set; }
+        public string Weekend1 { get; set; }
+        public string Weekend2 { get; set; }
 
 
     }
