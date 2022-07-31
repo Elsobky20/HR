@@ -1,3 +1,4 @@
+using BLL.Services.EmployeeServices;
 using DAL.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +45,7 @@ namespace UI
             }).AddEntityFrameworkStores<AplicationDbContext>()
         .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>(TokenOptions.DefaultProvider);
             services.AddControllersWithViews();
+            services.AddScoped<IEmployeeServices, EmployeeServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
